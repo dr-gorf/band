@@ -2,8 +2,36 @@
 <html>
   <head>
     <title>Dr. G.O.R.F</title>
+    <script src="angular.min.js"></script>
+    <script src="angular-route.min.js"></script>
+    <script>
+      angular.module('theApp', ['ngRoute'])
+        .config(function($routeProvider) {
+          $routeProvider.when('/', {
+            templateUrl: 'home.html',
+            controller: 'homeController'
+          }).when('/music', {
+            templateUrl: 'music.html',
+            controller: 'musicController'
+          }).otherwise({
+            redirectTo: '/'
+          });
+          }).controller('homeController', function($scope) {
+            // home page
+          }).controller('musicController', function($scope) {
+            // discography
+          })
+    </script>
   </head>
-  <body>
-    <p>Hello!</p>
+  <body ng-app="theApp">
+    <p><a href = "#home">home</a></p>
+    <p><a href = "#music">music</a></p>
+    <div ng-view></div>
+    <script type="text/ng-template" id="home.html">
+      <h1>Home</h1>
+    </script>
+    <script type="text/ng-template" id="music.html">
+      <h1>Music</h1>
+    </script>
   </body>
 </html>
