@@ -1,142 +1,227 @@
 <!doctype html>
 <html>
   <head>
-    <title>Dr. G.O.R.F</title>
+    <title>Dr. GORF</title>
     <link href='https://fonts.googleapis.com/css?family=Orbitron:700|Open+Sans' rel='stylesheet' type='text/css'>
     <script src="angular.min.js"></script>
     <script src="angular-route.min.js"></script>
+    <script src="angular-animate.min.js"></script>
     <script>
-      angular.module('theApp', ['ngRoute'])
-        .config(function($routeProvider) {
-          $routeProvider.when('/', {
+      angular.module('theApp', ['ngRoute', 'ngAnimate'])
+      .config(function($routeProvider) {
+        $routeProvider.when('/', {
             templateUrl: 'home.html',
             controller: 'homeController'
+          }).when('/bio', {
+            templateUrl: 'bio.html',
+            controller: 'bioController'
           }).when('/music', {
             templateUrl: 'music.html',
             controller: 'musicController'
+          }).when('/reviews', {
+            templateUrl: 'reviews.html',
+            controller: 'reviewsController'
           }).otherwise({
             redirectTo: '/'
           });
-          }).controller('homeController', function($scope) {
-            // home page
-          }).controller('musicController', function($scope) {
-            // discography
-          })
+        }).controller('homeController', function($scope) {
+          // home page
+        }).controller('bioController', function($scope) {
+          // bio page
+        }).controller('musicController', function($scope) {
+          // discography
+        }).controller('reviewsController', function($scope) {
+          // reviews
+        })
     </script>
     <style>
-        /* 
-        html5doctor.com Reset Stylesheet
-        v1.6.1
-        Last Updated: 2010-09-17
-        Author: Richard Clark - http://richclarkdesign.com 
-        Twitter: @rich_clark
-        */
 
-        html, body, div, span, object, iframe,
-        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-        abbr, address, cite, code,
-        del, dfn, em, img, ins, kbd, q, samp,
-        small, strong, sub, sup, var,
-        b, i,
-        dl, dt, dd, ol, ul, li,
-        fieldset, form, label, legend,
-        table, caption, tbody, tfoot, thead, tr, th, td,
-        article, aside, canvas, details, figcaption, figure, 
-        footer, header, hgroup, menu, nav, section, summary,
-        time, mark, audio, video {
-            margin:0;
-            padding:0;
-            border:0;
-            outline:0;
-            font-size:100%;
-            vertical-align:baseline;
-            background:transparent;
-        }
+      /* 
+      html5doctor.com Reset Stylesheet
+      v1.6.1
+      Last Updated: 2010-09-17
+      Author: Richard Clark - http://richclarkdesign.com 
+      Twitter: @rich_clark
+      */
 
-        h1 {
-            font-size: 64px;
-            font-family: 'Orbitron'
-        }
+      html, body, div, span, object, iframe,
+      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+      abbr, address, cite, code,
+      del, dfn, em, img, ins, kbd, q, samp,
+      small, strong, sub, sup, var,
+      b, i,
+      dl, dt, dd, ol, ul, li,
+      fieldset, form, label, legend,
+      table, caption, tbody, tfoot, thead, tr, th, td,
+      article, aside, canvas, details, figcaption, figure, 
+      footer, header, hgroup, menu, nav, section, summary,
+      time, mark, audio, video {
+        margin:0;
+        padding:0;
+        border:0;
+        outline:0;
+        font-size:100%;
+        vertical-align:baseline;
+        background:transparent;
+      }
 
-        body {
-            line-height:1;
-            font-family: 'Open Sans', sans-serif;
-        }
+      h1 {
+        font-size: 78px;
+        font-family: 'Orbitron';
+      }
 
-        article,aside,details,figcaption,figure,
-        footer,header,hgroup,menu,nav,section { 
-            display:block;
-        }
+      body {
+        line-height:1;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        text-align:  center;
+        color: #333;
+      }
 
-        nav ul {
-            list-style:none;
-        }
+      article,aside,details,figcaption,figure,
+      footer,header,hgroup,menu,nav,section { 
+        display:block;
+      }
 
-        blockquote, q {
-            quotes:none;
-        }
+      blockquote, q {
+        quotes:none;
+      }
 
-        blockquote:before, blockquote:after,
-        q:before, q:after {
-            content:'';
-            content:none;
-        }
+      blockquote:before, blockquote:after,
+      q:before, q:after {
+        content:'';
+        content:none;
+      }
 
-        a {
-            margin:0;
-            padding:0;
-            font-size:100%;
-            vertical-align:baseline;
-            background:transparent;
-        }
+      a {
+        padding: 4px 0 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+        text-decoration: none;
+     }
 
-        /* change colours to suit your needs */
-        ins {
-            background-color:#ff9;
-            color:#000;
-            text-decoration:none;
-        }
+      .main {
+        width: 960px;
+        max-width: 100%;
+        height: 100%;
+        margin: auto;
+      }
 
-        /* change colours to suit your needs */
-        mark {
-            background-color:#ff9;
-            color:#000; 
-            font-style:italic;
-            font-weight:bold;
-        }
+      .title {
+        margin: 80px 0 20px;
+      }
 
-        abbr[title], dfn[title] {
-            border-bottom:1px dotted;
-            cursor:help;
-        }
+      .nav {
+        display: block;
+      }
 
-        table {
-            border-collapse:collapse;
-            border-spacing:0;
-        }
+      nav ul {
+        list-style:none;
+      }
 
-        input, select {
-            vertical-align:middle;
-        }
+      .nav-listing li {
+        display: inline-block;
+        list-style-type: none;
+        padding: 0px 40px;
+      }
+
+     .nav-listing a {
+        position: relative;
+        top: 0;
+        color: #a8a8a8;
+        transition: 0.25s ease-out;
+      }
+
+      .nav-listing a:hover {
+        top: -4px;
+        color: #f6f;
+        padding: 0 0 4px;
+      }
+
+      .view-wrapper {
+        position: relative;
+        width: 100%
+      }
+
+      .view {
+        margin: 100px 0;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
+
+      .view.ng-enter {
+        -webkit-animation: fadeIn 0.5s;
+        -moz-animation: fadeIn 0.5s;
+        animation: fadeIn 0.5s;
+      }
+
+      .view.ng-leave {
+        -webkit-animation: fadeOut 0.5s;
+        -moz-animation: fadeOut 0.5s;
+        animation: fadeOut 0.5s;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+      }
+
+
+      .albums {
+          width: 100%;
+          text-align: center
+      }
+
+      .album {
+        width: 600px;
+        height: 100%;
+        margin: auto
+      }
+
+
     </style>
   </head>
   <body ng-app="theApp">
-    <h1>Dr. G.O.R.F</h1>
-    <div class="nav">
+    <div class="main">
+      <div class="title">
+        <h1>Dr. GORF</h1>
+      </div>
+      <menu class="nav">
         <ol class="nav-listing">
-            <li><a href = "#home">home</a></li>
-            <li><a href = "#music">music</a></li>
+          <li><a href="#home">home</a></li>
+          <li><a href="#bio">bio</a></li>
+          <li><a href="#music">music</a></li>
+          <li><a href="#reviews">reviews</a></li>
         </ol>
+      </menu>
+      <div class="view-wrapper">
+        <div class="view" ng-view></div>
+      </div>
+      <script type="text/ng-template" id="home.html">
+        <p>You are here</p>
+      </script>
+      <script type="text/ng-template" id="bio.html">
+        <p>( bio )</p>
+      </script>
+      <script type="text/ng-template" id="music.html">
+        <p>All of our music is free to download.</p>
+        <div class="albums">
+            <div class="album">
+              <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/140836651&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+            </div>
+        </div>
+      </script>
+      <script type="text/ng-template" id="reviews.html">
+        <p>( reviews )</p>
+      </script>
     </div>
-    <div ng-view></div>
-    <script type="text/ng-template" id="home.html">
-      <h2>Home</h2>
-      <p>Hello</p>
-    </script>
-    <script type="text/ng-template" id="music.html">
-      <h2>Music</h2>
-      <p>Listen to it.</p>
-      <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/140836651&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
-    </script>
   </body>
 </html>
