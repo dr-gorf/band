@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Dr. G.O.R.F</title>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron:700|Open+Sans' rel='stylesheet' type='text/css'>
     <script src="angular.min.js"></script>
     <script src="angular-route.min.js"></script>
     <script>
@@ -22,16 +23,119 @@
             // discography
           })
     </script>
+    <style>
+        /* 
+        html5doctor.com Reset Stylesheet
+        v1.6.1
+        Last Updated: 2010-09-17
+        Author: Richard Clark - http://richclarkdesign.com 
+        Twitter: @rich_clark
+        */
+
+        html, body, div, span, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        abbr, address, cite, code,
+        del, dfn, em, img, ins, kbd, q, samp,
+        small, strong, sub, sup, var,
+        b, i,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section, summary,
+        time, mark, audio, video {
+            margin:0;
+            padding:0;
+            border:0;
+            outline:0;
+            font-size:100%;
+            vertical-align:baseline;
+            background:transparent;
+        }
+
+        h1 {
+            font-size: 64px;
+            font-family: 'Orbitron'
+        }
+
+        body {
+            line-height:1;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        article,aside,details,figcaption,figure,
+        footer,header,hgroup,menu,nav,section { 
+            display:block;
+        }
+
+        nav ul {
+            list-style:none;
+        }
+
+        blockquote, q {
+            quotes:none;
+        }
+
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content:'';
+            content:none;
+        }
+
+        a {
+            margin:0;
+            padding:0;
+            font-size:100%;
+            vertical-align:baseline;
+            background:transparent;
+        }
+
+        /* change colours to suit your needs */
+        ins {
+            background-color:#ff9;
+            color:#000;
+            text-decoration:none;
+        }
+
+        /* change colours to suit your needs */
+        mark {
+            background-color:#ff9;
+            color:#000; 
+            font-style:italic;
+            font-weight:bold;
+        }
+
+        abbr[title], dfn[title] {
+            border-bottom:1px dotted;
+            cursor:help;
+        }
+
+        table {
+            border-collapse:collapse;
+            border-spacing:0;
+        }
+
+        input, select {
+            vertical-align:middle;
+        }
+    </style>
   </head>
   <body ng-app="theApp">
-    <p><a href = "#home">home</a></p>
-    <p><a href = "#music">music</a></p>
+    <h1>Dr. G.O.R.F</h1>
+    <div class="nav">
+        <ol class="nav-listing">
+            <li><a href = "#home">home</a></li>
+            <li><a href = "#music">music</a></li>
+        </ol>
+    </div>
     <div ng-view></div>
     <script type="text/ng-template" id="home.html">
-      <h1>Home</h1>
+      <h2>Home</h2>
+      <p>Hello</p>
     </script>
     <script type="text/ng-template" id="music.html">
-      <h1>Music</h1>
+      <h2>Music</h2>
+      <p>Listen to it.</p>
     </script>
   </body>
 </html>
