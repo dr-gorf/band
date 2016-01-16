@@ -7,6 +7,17 @@
     <script src="angular-route.min.js"></script>
     <script src="angular-animate.min.js"></script>
     <script>
+      Array.prototype.shuffle = function() {
+        var i = this.length, j, temp;
+        if ( i == 0 ) return this;
+        while ( --i ) {
+          j = Math.floor( Math.random() * ( i + 1 ) );
+          temp = this[i];
+          this[i] = this[j];
+          this[j] = temp;
+        }
+        return this;
+      }
       angular.module('theApp', ['ngRoute', 'ngAnimate'])
       .config(function($routeProvider) {
         $routeProvider.when('/', {
@@ -30,8 +41,26 @@
           // bio page
         }).controller('musicController', function($scope) {
           // discography
-        }).controller('reviewsController', function($scope) {
+        }).controller('reviewsController', function($scope, $timeout) {
           // reviews
+          $scope.reviews = [
+            'This is awful',
+            'You guys are making too much noise',
+            'The pirate song is ok, but that\'s about it',
+            'Do you have any idea what a "groove" is?',
+            'Stop.',
+            ''
+            ]
+          var i = 0
+          function showReview() {
+            var j = i
+            while (j == i) {
+              j = Math.floor(Math.random() * ($scope.reviews.length))
+            }
+            $scope.current = i = j
+            $timeout(showReview, 4000)
+          }
+          showReview()
         })
     </script>
     <style>
@@ -83,14 +112,23 @@
         display:block;
       }
 
-      blockquote, q {
-        quotes:none;
+      blockquote {
+        margin: 1.5em 10px;
+        padding: 0.5em 10px;
+        quotes: "\201C""\201D""\2018""\2019";
       }
 
-      blockquote:before, blockquote:after,
-      q:before, q:after {
-        content:'';
-        content:none;
+      blockquote:before {
+        color: #ccc;
+        content: open-quote;
+        font-size: 2em;
+        line-height: 0.1em;
+        margin-right: 0.25em;
+        vertical-align: -0.4em;
+      }
+
+      blockquote p {
+        display: inline;
       }
 
       a {
@@ -174,6 +212,38 @@
         to { opacity: 0; }
       }
 
+      .reviews {
+        position: relative;
+      }
+
+      .review {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 0
+      }
+
+      .review.ng-enter {
+        -webkit-animation: slideIn 0.5s;
+        -moz-animation: slideIn 0.5s;
+        animation: slideIn 0.5s;
+      }
+
+      .review.ng-leave {
+        -webkit-animation: slideOut 0.5s;
+        -moz-animation: slideOut 0.5s;
+        animation: slideOut 0.5s;
+      }
+
+      @keyframes slideIn {
+        from { left: -100%; opacity: 0}
+        to { left: 0; opacity: 1 }
+      }
+
+      @keyframes slideOut {
+        from { left: 0; opacity: 1 }
+        to { left: 100%; opacity: 0 }
+      }
 
       .albums {
           width: 100%;
@@ -220,7 +290,11 @@
         </div>
       </script>
       <script type="text/ng-template" id="reviews.html">
-        <p>( reviews )</p>
+        <div class="reviews">
+          <div class="review" ng-if="$index == current" ng-repeat="review in reviews">
+            <blockquote><p>{{review}}</p></blockquote>
+          </div>
+        </div>
       </script>
     </div>
   </body>
