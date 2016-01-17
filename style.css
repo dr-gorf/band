@@ -99,15 +99,15 @@ a:hover {
 
 header {
   z-index: 3;
-  background: #fff;
   height: auto !important;
+  bottom: 0;
 }
 
 .header-inner {
   padding: 80px 0 40px;
   height: auto !important;
   bottom: auto !important;
-
+  background: #fff;
 }
 
 .nav {
@@ -151,7 +151,7 @@ nav ul {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 100px 0;
+  padding: 100px 0 0 0;
 }
 
 .view.ng-enter {
@@ -183,6 +183,12 @@ nav ul {
   text-align: center;
 }
 
+.content p {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+
 /* no parallax */
 .standard-view {
   position: relative;
@@ -208,7 +214,6 @@ nav ul {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
   -webkit-transform-origin-x: 100%;
   transform-origin-x: 100%;
   -webkit-transform: translateZ(0);
@@ -232,23 +237,25 @@ nav ul {
 }
 
 .bio-content {
-  padding: 140px 0
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .bio-img1 {
-  background: url('img/slide1.jpg');
+  background: url('img/slide1.jpg') no-repeat;
 }
 
 .bio-img2 {
-  background: url('img/slide2.jpg');
+  background: url('img/slide2.jpg') no-repeat;
 }
 
 .bio-img3 {
-  background: url('img/slide3.jpg');
+  background: url('img/slide3.jpg') no-repeat;
 }
 
 .bio-img {
-  background-size: 100% auto
+  background-size: 100% auto;
+  background-position: center;
 }
 
 /* music */
@@ -308,4 +315,47 @@ nav ul {
 @keyframes dropOut {
   from { top: 0 }
   to { top: 200vh }
+}
+
+@media screen and (max-width: 840px) {
+  .bio-img {
+    background-size: 840px auto;
+  }
+
+  .bio-content {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .nav-listing li {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 70px;
+  }
+
+  .nav-listing li {
+    padding: 0 24px;
+  }
+
+  .bio-content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  .nav-listing li {
+    padding: 0 16px;
+  }
 }

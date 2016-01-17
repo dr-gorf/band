@@ -34,7 +34,7 @@ angular.module('theApp', ['ngRoute', 'ngAnimate'])
         text: 'reviews'
       }
     ]
-  }).controller('home', function($scope, $timeout) {
+  }).controller('home', function($scope, $location) {
     // home page
   }).controller('music', function($scope) {
     // discography
@@ -48,7 +48,8 @@ angular.module('theApp', ['ngRoute', 'ngAnimate'])
       'The pirate song is ok, but that\'s about it',
       'Do you even know what a "groove" is?',
       'Stop.',
-      'Did you record that on your phone?'
+      'Did you record that on your phone?',
+      'You\'re not doing it right'
       ]
     var i = 0
     var done = false

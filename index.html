@@ -8,6 +8,7 @@
     <script src="js/angular.min.js"></script>
     <script src="js/angular-route.min.js"></script>
     <script src="js/angular-animate.min.js"></script>
+    <script src="js/smooth.js"></script>
     <script src="js/app.js"></script>
   </head>
   <body ng-app="theApp">
@@ -21,7 +22,7 @@
           <menu ng-controller="nav" class="nav">
             <ol class="nav-listing">
               <li ng-repeat="link in links">
-              <a href="{{link.href}}">{{link.text}}</a>
+              <a ng-click="scrollToTop" href="{{link.href}}">{{link.text}}</a>
               </li>
             </ol>
           </menu>
