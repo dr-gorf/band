@@ -187,6 +187,12 @@ nav ul {
 .content p {
   padding-left: 40px;
   padding-right: 40px;
+  text-align: justify;
+}
+
+.content h2, .content h3 {
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 
@@ -349,6 +355,10 @@ nav ul {
   h1 {
     font-size: 70px;
   }
+  
+  .header-inner {
+    padding: 40px 0 30px;
+  }
 
   .nav-listing li {
     padding: 0 24px;
@@ -362,6 +372,10 @@ nav ul {
 
 
 @media screen and (max-width: 420px) {
+  .bio-img {
+    background-size: 768px auto;
+  }
+
   h1 {
     font-size: 60px;
   }
@@ -370,3 +384,24 @@ nav ul {
     padding: 0 16px;
   }
 }
+
+
+@media screen and (max-width: 360px) {
+  .bio-img {
+    background-size: 768px auto;
+  }
+
+  h1 {
+    font-size: 50px;
+    padding-bottom: 10px;
+  }
+
+  .nav-listing li {
+    padding: 0 12px;
+  }
+
+  .content p {
+    font-size: 0.9em;
+  }
+}
+
