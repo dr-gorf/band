@@ -34,8 +34,10 @@ angular.module('theApp', ['ngRoute', 'ngAnimate'])
         text: 'reviews'
       }
     ]
-  }).controller('home', function($scope, $location) {
+  }).controller('home', function($scope, $rootScope) {
     // home page
+    $rootScope.home = true
+    $scope.$on('$destroy', function() { $rootScope.home = false })
   }).controller('music', function($scope) {
     // discography
   }).controller('band', function($scope) {

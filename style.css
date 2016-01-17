@@ -243,6 +243,18 @@ nav ul {
   z-index: 3;
 }
 
+.parallax-group.ng-enter {
+  -webkit-animation: fadeIn 0.5s;
+  -moz-animation: fadeIn 0.5s;
+  animation: fadeIn 0.5s;
+}
+
+.parallax-group.ng-leave {
+  -webkit-animation: fadeOut 0.5s;
+  -moz-animation: fadeOut 0.5s;
+  animation: fadeOut 0.5s;
+}
+
 .bio-content {
   padding-top: 100px;
   padding-bottom: 100px;
