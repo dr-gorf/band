@@ -34,6 +34,7 @@ h1 {
 h2 {
   font-size: 29px;
   font-style: italic;
+  color: #025259;
 }
 
 body {
@@ -151,7 +152,7 @@ nav ul {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 100px 0 0 0;
+  padding: 0;
 }
 
 .view.ng-enter {
@@ -261,21 +262,31 @@ nav ul {
 /* music */
 
 .albums {
-  width: 100%;
   text-align: center
 }
 
 .album {
+  text-align: left;
   width: 600px;
+  max-width: 100%;
   height: 100%;
-  margin: auto
+  margin: auto;
+  padding: 20px 0 50px 0;
 }
 
+.album h2 {
+  padding-bottom: 16px;
+}
+
+/* band */
+.band {
+}
 
 /* reviews */
 
 .reviews {
   position: relative;
+  top: 17vh;
 }
 
 .review {
