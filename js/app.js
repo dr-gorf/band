@@ -48,11 +48,11 @@ angular.module('theApp', ['ngRoute', 'ngAnimate'])
       'This is awful',
       'You guys are making too much noise',
       'The pirate song is ok, but that\'s about it',
-      'Do you even know what a "groove" is?',
       'Stop.',
       'Did you record that on your phone?',
-      'You\'re not doing it right'
-      ]
+      'You\'re not doing it right',
+      'When you shaved your mustache on stage... it was magical'
+    ]
     var i = 0
     var done = false
     console.log('started reviews controller');
