@@ -374,25 +374,21 @@ nav ul {
   to { top: 200vh }
 }
 
-/* generic media queries, then device-specific ones */
-@media screen and (max-width: 1000px) {
+/* iPad */
+@media screen and (width: 768px) and (min-height: 1024px) {
   .bio-img {
     background-size: auto 100%;
   }
 
-}
-
-/* iPad */
-@media screen and (max-width: 768px) {
   .content p {
     font-size: 1.2em
- } 
+  } 
  
- .bio-content {
+  .bio-content {
     padding-top: 110px;
- }
+  }
 }
-@media screen and (max-width: 1024px) and (max-height: 768px) {
+@media screen and (width: 1024px) and (height: 768px) {
   
   .portrait {
     display: none;
@@ -408,8 +404,21 @@ nav ul {
     display: inherit;
   }
 }
+/* < iPad */
+@media screen and (max-width: 767px) {
+  .bio-content {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+  .landscape-left, .landscape-right: {
+      padding-top: 0;
+      padding-bottom: 0;
+  }
+}
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 568px) {
   .nav-listing li {
     padding: 0 30px;
   }
@@ -486,6 +495,11 @@ nav ul {
   }
 }
 @media screen and (max-width: 736px) and (max-height: 414px) {
+
+  .bio-img {
+    background-size: 860px auto;
+  }
+
   .content p {
     font-size: 0.67em;
   }
@@ -523,11 +537,13 @@ nav ul {
   }
 
   .landscape-left {
+    padding-top: 0;
     display: inherit;
     width: 60%;
   }
 
   .landscape-right {
+    padding-top: 0;
     display: inherit;
     width: 40%;
   }
