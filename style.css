@@ -282,7 +282,6 @@ nav ul {
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   transition: 0.5s;
-  cursor: pointer;
 }
 
 .band-profile-pic:hover .band-profile-pic-overlay {
