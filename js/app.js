@@ -1,15 +1,19 @@
 angular.module('theApp', ['ngRoute', 'ngAnimate'])
   .config(function($routeProvider) {
     $routeProvider.when('/', {
+        title: 'Home',
         templateUrl: 'views/home.html',
         controller: 'home'
       }).when('/music', {
+        title: 'Music',
         templateUrl: 'views/music.html',
         controller: 'music'
       }).when('/band', {
+        title: 'The Band',
         templateUrl: 'views/band.html',
         controller: 'band'
-      }).when('/reviews', {
+      }).when('/complaints', {
+        title: 'Reviews',
         templateUrl: 'views/reviews.html',
         controller: 'reviews'
       }).otherwise({
@@ -30,7 +34,7 @@ angular.module('theApp', ['ngRoute', 'ngAnimate'])
         text: 'the band'
       },
       {
-        href: '#reviews',
+        href: '#complaints',
         text: 'reviews'
       }
     ]
@@ -45,13 +49,13 @@ angular.module('theApp', ['ngRoute', 'ngAnimate'])
   }).controller('reviews', function($scope, $timeout) {
     // reviews
     $scope.reviews = [
-      'This is awful',
-      'You guys are making too much noise',
-      'The pirate song is ok, but that\'s about it',
+      'This is awful.',
+      'You guys are making too much noise.',
+      'The pirate song is ok, but that\'s about it.',
       'Stop.',
       'Did you record that on your phone?',
-      'You\'re not doing it right',
-      'When you shaved your mustache on stage... it was magical'
+      'You\'re not doing it right.',
+      'When you shaved your mustache on stage... it was magical.'
     ]
     var i = 0
     var done = false
@@ -68,4 +72,9 @@ angular.module('theApp', ['ngRoute', 'ngAnimate'])
     }
     $scope.$on('$destroy', function() { done = true })
     showReview()
+  }).run(function($rootScope) {
+    $rootScope.$on('$routeChangeSuccess', function(event, current, previous) {
+      if (current.$$route)
+        $rootScope.title = current.$$route.title
+    })
   })

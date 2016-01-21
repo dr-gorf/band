@@ -1,7 +1,7 @@
 <!doctype html>
-<html>
+<html ng-app="theApp">
   <head>
-    <title>Dr. GORF</title>
+    <title ng-bind="$root.title + ' | Dr. GORF'">Dr. GORF</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Orbitron:700|Open+Sans|Droid+Serif" rel="stylesheet" type="text/css">
     <link href="style.css" rel="stylesheet" type="text/css">
@@ -11,7 +11,7 @@
     <script src="js/angular-animate.min.js"></script>
     <script src="js/app.js"></script>
   </head>
-  <body ng-app="theApp">
+  <body>
     <div class="main">
       <!--<header class="parallax-layer parallax-layer-base">-->
       <header class="parallax-group">
@@ -98,7 +98,8 @@
             <p>We are still creating music and are also in the process of uploading everything to <a href="http://soundcloud.com/dr-gorf" target="_blank">soundcloud.com/dr-gorf.</a></p>
             <p>All of our music is 100% free to download, share, perform, and otherwise inflict on people.</p>
             <p>We guarantee that listening to our songs will challenge you to think hard about how you spend your time. 
-               But don't take our word for it - check out what <a href="#reviews">our fans are saying</a>.</p>
+               But don't take our word for it - check out what <a href="#complaints">our fans are saying</a>.</p>
+            <p class="photo-credit">photos by Kelly McCord - <a href="http://kellymccord.com" target="_blank">http://kellymccord.com</a></p>
           </div>
         </div>
       </div>

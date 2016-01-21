@@ -37,6 +37,14 @@ h2 {
   color: #025259;
 }
 
+h3 {
+  font-family: 'Open Sans', 'sans-serif';
+  font-family: monospace;
+  font-weight: normal;
+  font-size: 22px;
+  color: #a8a8a8;
+}
+
 body {
   line-height:1;
   font-family: 'Droid Serif', serif;
@@ -195,15 +203,81 @@ nav ul {
   padding-right: 40px;
 }
 
+.content ul {
+  text-align: left;
+}
+
+.content li {
+  padding-bottom: 10px;
+  list-style-type: none;
+}
+
+/* band page */
+.band-section {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.left-panel {
+  float: left;
+  width: 50%;
+}
+
+.right-panel {
+  float: right;
+  width: 50%;
+}
+
+.left-panel p, .right-panel p {
+  padding: 0;
+  margin-top: 20px;
+}
+
+.left-panel h3, .right-panel h3 {
+  padding: 20px 0 0;
+}
+
+.band-profile-pic-wrapper-left {
+  padding: 40px 60px 40px 0;
+}
+
+.band-profile-pic-wrapper-right {
+  padding: 40px 0 40px 60px;
+}
+
+.band-profile-pic {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.accordian {
+  background: url('img/accordian.jpg') no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+
+.stick {
+  background: url('img/stick.jpg') no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+}
+
+.band-profile-pic img {
+  min-width: 100%;
+  min-height: 100%;
+}
 
 /* no parallax */
 .standard-view {
   position: relative;
 }
 
-/* bio */
 /* parallax stuff stolen from: http://keithclark.co.uk/articles/pure-css-parallax-websites/ */
-
 .parallax {
     /* moved to main */
 }
@@ -261,6 +335,19 @@ nav ul {
 .bio-content {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.photo-credit {
+  font-style: italic;
+  font-size: 12px;
+  display: block;
+  float: right;
+  text-align: right;
+}
+
+.photo-credit a {
+  color: #a8a8a8;
+  text-decoration: underline;
 }
 
 .portrait: {
