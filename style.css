@@ -15,7 +15,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section, summary,
+footer, header, menu, nav, section, summary,
 time, mark, audio, video {
   margin:0;
   padding:0;
@@ -28,7 +28,7 @@ time, mark, audio, video {
 
 h1 {
   font-size: 78px;
-  font-family: 'Orbitron';
+  font-family: 'Orbitron', sans-serif;
 }
 
 h2 {
@@ -38,7 +38,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'Open Sans', 'sans-serif';
+  /*font-family: 'Open Sans', 'sans-serif';*/
   font-family: monospace;
   font-weight: normal;
   font-size: 22px;
@@ -59,7 +59,7 @@ p {
 }
 
 article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section { 
+footer,header,menu,nav,section {
   display:block;
 }
 
@@ -130,7 +130,7 @@ nav ul {
 .nav-listing li {
   display: inline-block;
   list-style-type: none;
-  padding: 0px 40px;
+  padding: 0 40px;
 }
 
 .nav-listing a {
@@ -387,7 +387,7 @@ nav ul {
   text-decoration: underline;
 }
 
-.portrait: {
+.portrait {
   display: inherit
 }
 
@@ -536,7 +536,7 @@ nav ul {
   }
 }
 @media screen and (max-width: 1023px) and (orientation: landscape) {
-  .landscape-left, .landscape-right: {
+  .landscape-left, .landscape-right {
       padding-top: 0;
       padding-bottom: 0;
   }
@@ -601,7 +601,7 @@ nav ul {
     padding-bottom: 40px;
   }
 
-  .parallax-layer-base: {
+  .parallax-layer-base {
     font-size: 0.85em
   }
 
