@@ -83,7 +83,7 @@ blockquote p {
 }
 
 a {
-  color: #f6f;
+  color: #f6c;
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
@@ -146,7 +146,7 @@ nav ul {
 }
 
 .nav-listing a:hover, .nav-listing a.highlighted {
-  color: #f6f;
+  color: #f6c;
 }
 
 .nav-listing a:hover {
