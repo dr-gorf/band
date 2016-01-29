@@ -41,13 +41,17 @@ angular.module('theApp', ['ngRoute', 'ngAnimate'])
   }).controller('home', function($scope, $rootScope) {
     // home page
     $rootScope.home = true
+    $rootScope.where = '#home'
     $scope.$on('$destroy', function() { $rootScope.home = false })
-  }).controller('music', function($scope) {
+  }).controller('music', function($scope, $rootScope) {
     // discography
-  }).controller('band', function($scope) {
+    $rootScope.where = '#music'
+  }).controller('band', function($scope, $rootScope) {
     // the band page
-  }).controller('reviews', function($scope, $timeout) {
+    $rootScope.where = '#band'
+  }).controller('reviews', function($scope, $timeout, $rootScope) {
     // reviews
+    $rootScope.where = '#complaints'
     $scope.reviews = [
       'This is awful.',
       'You guys are making too much noise.',

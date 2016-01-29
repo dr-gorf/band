@@ -22,7 +22,7 @@
           <menu ng-controller="nav" class="nav">
             <ol class="nav-listing">
               <li ng-repeat="link in links">
-              <a ng-click="scrollToTop" href="{{link.href}}">{{link.text}}</a>
+              <a ng-click="scrollToTop" ng-class="{ 'highlighted': link.href == $root.where }" href="{{link.href}}">{{link.text}}</a>
               </li>
             </ol>
           </menu>
