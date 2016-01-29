@@ -375,7 +375,8 @@ nav ul {
 
 .photo-credit {
   font-style: italic;
-  font-size: 12px;
+  font-size: 14px;
+  margin-top: 0;
   display: block;
   float: right;
   text-align: right;
