@@ -60,7 +60,8 @@ angular.module('theApp', ['ngRoute', 'ngAnimate'])
       'Did you record that on your phone?',
       'You\'re not doing it right.',
       'When you shaved your mustache on stage... it was magical.',
-      'No - he doesn\'t get another one.' 
+      'No - he doesn\'t get another one.',
+      'You guys aren\'t just dorks. You\'re more than dorks. It\'s multifaceted.'
     ]
     var i = 0
     var done = false
