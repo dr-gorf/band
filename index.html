@@ -1,0 +1,94 @@
+<!doctype html>
+<html ng-app="theApp">
+  <head>
+    <title ng-bind="$root.title + ' | SUPPLE CONGRESS'">SUPPLE CONGRESS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:700|Open+Sans|Droid+Serif" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <!--<header class="parallax-layer parallax-layer-base">-->
+      <header class="parallax-group">
+        <div class="header-inner">
+          <div class="title">
+            <h1>SUPPLE CONGRESS</h1>
+          </div>
+          <menu ng-controller="nav" class="nav">
+            <ol class="nav-listing">
+              <li ng-repeat="link in links">
+              <a ng-click="scrollToTop" ng-class="{ 'highlighted': link.href == $root.where }" href="{{link.href}}">{{link.text}}</a>
+              </li>
+            </ol>
+          </menu>
+        </div>
+      </header>
+      <div class="view-wrapper">
+        <div class="view" ng-view></div>
+      </div>
+
+      <!-- home view -->
+      <div ng-if="$root.home" style="z-index: 1" class="parallax-group">
+        <div class="parallax-layer parallax-layer-back bio-img bio-img1"></div>
+      </div>
+
+      <div ng-if="$root.home" style="z-index: 5" class="parallax-group">
+        <div class="parallax-layer parallax-layer-base">
+          <div class="content bio-content">
+            <h2>Hello</h2>
+            <p>We're Supple Congress and we've been making music together for over 10 years</p>
+            <p>
+            </p>
+            <p>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div ng-if="$root.home" style="z-index: 2" class="parallax-group">
+          <div class="parallax-layer parallax-layer-back bio-img bio-img2"></div>
+      </div>
+
+      <div ng-if="$root.home" style="z-index: 6" class="parallax-group">
+        <div class="parallax-layer parallax-layer-base">
+          <div class="content bio-content">
+            <h2>What We Do</h2>
+            <p>
+
+            </p>
+            <p>
+            At its heart, Supple Congress is just a couple of has-beens trying to relive their glory days by recording ironically absurd music.
+            But if you look past that, you find a rich tapestry of genre-transcending sonic poetry. 
+            </p>
+            <p> 
+            Our style knows no bounds, and our standards have never been lower.
+            From the grungy punk guitars in "pFixie" to the explicit Gangsta-rap lyrics of "Rudolph the Red-Nosed Reindeer" - Supple Congress has done it all, and will continue to do it all long after people lose interest.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div ng-if="$root.home" style="z-index: 3" class="parallax-group">
+          <div class="parallax-layer parallax-layer-back bio-img bio-img3"></div>
+      </div>
+      <div ng-if="$root.home" style="z-index: 8" class="parallax-group">
+        <div class="parallax-layer parallax-layer-base">
+          <div class="content bio-content">
+            <h2>You're Still Reading?</h2>
+            <p>We are still creating music and are also in the process of uploading everything to <a href="http://soundcloud.com/supple-congress" target="_blank">soundcloud.com/supple-congress.</a></p>
+            <p>All of our music is 100% free to download, share, perform, and otherwise inflict on people.</p>
+            <p>We guarantee that listening to our songs will challenge you to think hard about how you spend your time. 
+               But don't take our word for it - check out what <a href="#complaints">our fans are saying</a>.</p>
+            <p class="photo-credit">photos by Kelly McCord<br><a href="http://kellymccord.com" target="_blank">http://kellymccord.com</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

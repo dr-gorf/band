@@ -1,0 +1,857 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+ */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+h1 {
+  font-size: 78px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+h2 {
+  font-size: 29px;
+  font-style: italic;
+  color: #025259;
+}
+
+h3 {
+  /*font-family: 'Open Sans', 'sans-serif';*/
+  font-family: monospace;
+  font-weight: normal;
+  font-size: 22px;
+  color: #a8a8a8;
+}
+
+body {
+  line-height:1;
+  font-family: 'Droid Serif', serif;
+  font-size: 20px;
+  text-align:  center;
+  color: #333;
+}
+
+p {
+  margin: 40px 0;
+  line-height: 1.5em;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,menu,nav,section {
+  display:block;
+}
+
+blockquote {
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 2em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
+
+a {
+  color: #f6c;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #a8a8a8;
+}
+
+/* parallax */
+.main {
+  height: 500px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+  -webkit-perspective-origin-x: 100%;
+  perspective-origin-x: 100%;
+}
+
+header {
+  z-index: 3;
+  height: auto !important;
+  bottom: 0;
+}
+
+.header-inner {
+  padding: 80px 0 40px;
+  height: auto !important;
+  bottom: auto !important;
+  background: #fff;
+}
+
+.nav {
+  display: block;
+  margin-top: 10px
+}
+
+nav ul {
+  list-style:none;
+}
+
+.nav-listing li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0 40px;
+}
+
+.nav-listing a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  position: relative;
+  top: 0;
+  color: #a8a8a8;
+  -webkit-transition: 0.25s ease-out;
+  -moz-transition: 0.25s ease-out;
+  transition: 0.25s ease-out;
+}
+
+.nav-listing a:hover, .nav-listing a.highlighted {
+  color: #f6c;
+}
+
+.nav-listing a:hover {
+  top: -4px;
+}
+
+.view-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+}
+
+.view.ng-enter {
+  -webkit-animation: swoopIn 0.5s;
+  -moz-animation: swoopIn 0.5s;
+  animation: swoopIn 0.5s;
+}
+
+.view.ng-leave {
+  -webkit-animation: dropOut 0.5s;
+  -moz-animation: dropOut 0.5s;
+  animation: dropOut 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.content {
+  width: 600px;
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.content p {
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: justify;
+}
+
+.content h2, .content h3 {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.content ul {
+  text-align: left;
+}
+
+.content li {
+  padding-bottom: 10px;
+  list-style-type: none;
+}
+
+/* band page */
+.band-section {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.left-panel {
+  float: left;
+  width: 50%;
+}
+
+.right-panel {
+  float: right;
+  width: 50%;
+}
+
+.left-panel li, .right-panel li {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.band-profile-pic-wrapper {
+  padding: 40px 20px 20px;
+  max-width: 200px;
+  margin: auto;
+}
+
+.band-profile-pic {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.band-profile-pic .name {
+  color: white;
+  font: 28px 'Open Sans', sans-serif;
+  font-weight: normal;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -20px;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.band-profile-pic-overlay {
+  width: 100%;
+  padding-bottom: 100%;
+  background: #000;
+  opacity: 0.3;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.band-profile-pic:hover .band-profile-pic-overlay {
+  opacity: 0;
+}
+
+.band-profile-pic:hover .name {
+  top: -25px;
+}
+
+.accordian {
+  background: url('img/accordian.jpg') no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+
+.stick {
+  background: url('img/stick.jpg') no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+}
+
+.band-profile-pic img {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* no parallax */
+.standard-view {
+  position: relative;
+}
+
+/* parallax stuff stolen from: http://keithclark.co.uk/articles/pure-css-parallax-websites/ */
+.parallax {
+    /* moved to main */
+}
+
+.parallax-group {
+  position: relative;
+  height: 500px;
+  height: 100vh;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.parallax-layer-base {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-transform-origin-x: 100%;
+  transform-origin-x: 100%;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  z-index: 4;
+  background: #fff;
+/*  height: auto;*/
+  height: 100vh;
+  overflow: hidden;
+}
+
+.parallax-layer-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform-origin-x: 100%;
+  transform-origin-x: 100%;
+  -webkit-transform: translateZ(-300px) scale(2);
+  transform: translateZ(-300px) scale(2);
+  z-index: 3;
+  height: 100vh;
+}
+
+.parallax-group.ng-enter {
+  -webkit-animation: fadeIn 0.5s;
+  -moz-animation: fadeIn 0.5s;
+  animation: fadeIn 0.5s;
+}
+
+.parallax-group.ng-leave {
+  -webkit-animation: fadeOut 0.5s;
+  -moz-animation: fadeOut 0.5s;
+  animation: fadeOut 0.5s;
+}
+
+.bio-content {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.photo-credit {
+  font-style: italic;
+  font-size: 14px;
+  margin-top: 0;
+  display: block;
+  float: right;
+  text-align: right;
+}
+
+.photo-credit a {
+  color: #a8a8a8;
+  text-decoration: underline;
+}
+
+.portrait {
+  display: inherit
+}
+
+.landscape-left {
+  float: left;
+  width: 50%;
+  display: none;
+}
+
+.landscape-right {
+  float: right;
+  width: 50%;
+  display: none;
+}
+
+.landscape-inner {
+  padding: 0 20px;
+}
+
+
+.gorf-landscape, .gorf-no-img {
+  display: none;
+}
+
+.bio-img1 {
+  background: url('img/slide1.jpg') no-repeat;
+}
+
+.bio-img2 {
+  background: url('img/slide2.jpg') no-repeat;
+}
+
+.bio-img3 {
+  background: url('img/slide3.jpg') no-repeat;
+}
+
+.bio-img {
+  background-size: 100% auto;
+  background-position: center;
+}
+
+/* music */
+
+.albums {
+  text-align: center
+}
+
+.album {
+  text-align: left;
+  width: 600px;
+  max-width: 100%;
+  height: 100%;
+  margin: auto;
+  padding: 20px 0 50px 0;
+}
+
+.album h2 {
+  padding-bottom: 16px;
+}
+
+/* band */
+.band {
+}
+
+/* reviews */
+
+.reviews {
+  position: relative;
+  top: 17vh;
+}
+
+.review {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0
+}
+
+.review.ng-enter {
+  -webkit-animation: slideIn 0.5s;
+  -moz-animation: slideIn 0.5s;
+  animation: slideIn 0.5s;
+}
+
+.review.ng-leave {
+  -webkit-animation: slideOut 0.5s;
+  -moz-animation: slideOut 0.5s;
+  animation: slideOut 0.5s;
+}
+
+@keyframes slideIn {
+  from { left: -100%; /*opacity: 0*/}
+  to { left: 0; /*opacity: 1*/ }
+}
+
+@keyframes slideOut {
+  from { left: 0; /*opacity: 1*/ }
+  to { left: 100%; /*opacity: 0*/ }
+}
+
+@keyframes swoopIn {
+  from { top: 200vh }
+  to { top: 0 }
+}
+
+@keyframes dropOut {
+  from { top: 0 }
+  to { top: 200vh }
+}
+
+/* iPad */
+@media screen and (min-width: 768px) and (min-height: 1024px) {
+  .bio-img {
+    background-size: auto 100%;
+  }
+
+  .content p {
+    font-size: 1.34em
+  } 
+ 
+  .bio-content {
+    padding-top: 110px;
+  }
+
+  h2 {
+   font-size: 40px;
+  }
+}
+@media screen and (width: 1024px) and (height: 768px) {
+  
+  h2 {
+   font-size: 40px;
+  }
+
+  .portrait {
+    display: none;
+  }
+
+  .landscape-left {
+    padding-top: 80px;
+    display: inherit;
+  }
+
+  .landscape-right {
+    padding-top: 80px;
+    display: inherit;
+  }
+}
+/* < iPad */
+@media screen and (max-width: 767px) {
+  .bio-content {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+  .landscape-left, .landscape-right {
+      padding-top: 0;
+      padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .band-profile-pic-wrapper-left, .band-profile-pic-wrapper-right {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .band-profile-pic .name {
+    margin-top: -15px;
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .nav-listing li {
+    padding: 0 30px;
+  }
+
+  .bio-content {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .bio-img {
+    background-size: 840px auto;
+  }
+
+  .portrait {
+    display: inherit;
+  }
+
+  .landscape-left {
+    padding-top: 0;
+    display: none;
+  }
+
+  .landscape-right {
+    padding-top: 0;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 70px;
+  }
+  
+  .header-inner {
+    padding: 40px 0 30px;
+  }
+
+  .nav-listing li {
+    padding: 0 24px;
+  }
+
+  .bio-content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .parallax-layer-base {
+    font-size: 0.85em
+  }
+
+  .band-profile-pic .name {
+    margin-top: -15px;
+    font-size: 19px;
+  }
+}
+
+
+@media screen and (max-width: 420px) {
+  .bio-img {
+    background-size: 768px auto;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .nav-listing li {
+    padding: 0 16px;
+  }
+}
+
+
+
+
+/* iPhone 6+ */
+@media screen and (max-width: 414px) and (max-height: 736px) {
+  .content p {
+    font-size: 1.09em;
+  }
+}
+@media screen and (max-width: 736px) and (max-height: 414px) {
+
+  .bio-img {
+    background-size: 860px auto;
+  }
+
+  .content p {
+    font-size: 0.67em;
+    margin: 25px 0px;
+  }
+
+  .portrait {
+    display: none;
+  }
+
+  .landscape-left {
+    display: inherit;
+    width: 60%;
+  }
+
+  .landscape-right {
+    display: inherit;
+    width: 40%;
+  }
+}
+
+
+
+/* iPhone 6 (regular) */
+@media screen and (max-width: 375px) and (max-height: 627px) {
+  .content p {
+    font-size: 0.88em;
+  }
+  h1 {
+    font-size: 52px;
+  }
+}
+
+@media screen and (max-width: 627px) and (max-height: 375px) {
+  .content p {
+    font-size: 0.78em;
+  }
+
+
+  .portrait {
+    display: none;
+  }
+
+  .landscape-left {
+    padding-top: 0;
+    display: inherit;
+    width: 60%;
+  }
+
+  .landscape-right {
+    padding-top: 0;
+    display: inherit;
+    width: 40%;
+  }
+
+  .bio-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+}
+
+/* generic */
+@media screen and (max-width: 360px) {
+  .bio-img {
+    background-size: 768px auto;
+  }
+
+  h1 {
+    font-size: 50px;
+    padding-bottom: 10px;
+  }
+
+  .nav-listing li {
+    padding: 0 12px;
+  }
+
+}
+
+/* Galaxy S4 */
+@media screen and (max-width: 360px) and (max-height: 640px) {
+  .content p {
+    font-size: 0.78em;
+  }
+}
+@media screen and (max-width: 640px) and (max-height: 360px) {
+
+  .bio-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .content p {
+    margin: 20px 0;
+    font-size: 0.78em;
+  }
+
+  .content .gorf {
+    display: none;
+  }
+
+  .portrait {
+    display: none;
+  }
+
+  .landscape-left {
+    display: inherit;
+  }
+
+  .landscape-right {
+    display: inherit;
+  }
+}
+
+
+/* iPhone 5 */
+@media screen and (max-width: 320px) and (max-height: 568px) {
+  .content p {
+    font-size: 0.65em;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+}
+@media screen and (max-width: 568px) and (max-height: 320px) {
+  .content p {
+    font-size: 0.7em;
+  }
+
+  .portrait {
+    display: none;
+  }
+
+  .landscape-left {
+    display: inherit;
+    width: 65%;
+  }
+
+  .landscape-right {
+    display: inherit;
+    width: 35%;
+  }
+}
+
+
+
+/* iPhone 4 */
+@media screen and (max-width: 320px) and (max-height: 480px) {
+  .bio-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .content h2 {
+    font-size: 0.95em;
+  }
+
+  .content p {
+    font-size: 0.75em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .portrait {
+    display: inherit;
+  }
+
+  .landscape-left {
+    display: none;
+  }
+
+  .landscape-right {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) and (max-height: 320px) {
+  .bio-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .content h2 {
+    font-size: 0.95em;
+  }
+
+  .content p {
+    font-size: 0.69em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .portrait {
+    display: none;
+  }
+
+  .landscape-left {
+    display: inherit;
+  }
+
+  .landscape-right {
+    display: inherit;
+  }
+}
+
+
+
