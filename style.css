@@ -499,21 +499,29 @@ nav ul {
 }
 
 /* iPad */
-@media screen and (width: 768px) and (min-height: 1024px) {
+@media screen and (width: 768px) and (height: 1024px) {
   .bio-img {
     background-size: auto 100%;
   }
 
   .content p {
-    font-size: 1.2em
+    font-size: 1.34em
   } 
  
   .bio-content {
     padding-top: 110px;
   }
+
+  h2 {
+   font-size: 40px;
+  }
 }
 @media screen and (width: 1024px) and (height: 768px) {
   
+  h2 {
+   font-size: 40px;
+  }
+
   .portrait {
     display: none;
   }
@@ -632,7 +640,7 @@ nav ul {
 /* iPhone 6+ */
 @media screen and (max-width: 414px) and (max-height: 736px) {
   .content p {
-    font-size: 0.96em;
+    font-size: 1.09em;
   }
 }
 @media screen and (max-width: 736px) and (max-height: 414px) {
@@ -643,6 +651,7 @@ nav ul {
 
   .content p {
     font-size: 0.67em;
+    margin: 25px 0px;
   }
 
   .portrait {
@@ -665,13 +674,15 @@ nav ul {
 /* iPhone 6 (regular) */
 @media screen and (max-width: 375px) and (max-height: 627px) {
   .content p {
-    font-size: 0.78em;
+    font-size: 0.88em;
   }
 }
+
 @media screen and (max-width: 627px) and (max-height: 375px) {
   .content p {
     font-size: 0.78em;
   }
+
 
   .portrait {
     display: none;
@@ -789,7 +800,7 @@ nav ul {
   }
 
   .content p {
-    font-size: 0.63em;
+    font-size: 0.75em;
     margin-top: 20px;
     margin-bottom: 20px;
   }
@@ -817,7 +828,7 @@ nav ul {
   }
 
   .content p {
-    font-size: 0.6em;
+    font-size: 0.69em;
     margin-top: 20px;
     margin-bottom: 20px;
   }
