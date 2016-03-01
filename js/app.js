@@ -70,7 +70,7 @@ angular.module('theApp', ['ngRoute', 'ngAnimate'])
       "Did you record that on your phone?",
       "You're not doing it right.",
       "When you shaved your mustache on stage... it was magical.",
-      "No - he doesn't get another one.",
+      "I have been spending a lot of money on breakaway clothes...",
       "You aren't just dorks. You're more than dorks. It's multifaceted.",
       "He got turned into a spider and now he has a disease named after him. I'd better clear my calender for the next few weeks",
       "One thing is clear - you'll never look at your hairline again in the same way"
