@@ -70,7 +70,7 @@ angular.module('theApp', ['ngRoute', 'ngAnimate'])
       "Did you record that on your phone?",
       "You're not doing it right.",
       "When you shaved your mustache on stage... it was magical.",
-      "No - he doesn't get another one.",
+      "I have been spending a lot of money on breakaway clothes...",
       "You aren't just dorks. You're more than dorks. It's multifaceted.",
       "I heard of this vacation spot you should go to: Hell. You should go to Hell."
     ].shuffle()
