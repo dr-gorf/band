@@ -1,8 +1,8 @@
-/* 
+/*
 html5doctor.com Reset Stylesheet
 v1.6.1
 Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com 
+Author: Richard Clark - http://richclarkdesign.com
 Twitter: @rich_clark
  */
 html, body, div, span, object, iframe,
@@ -14,7 +14,7 @@ b, i,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
+article, aside, canvas, details, figcaption, figure,
 footer, header, menu, nav, section, summary,
 time, mark, audio, video {
   margin:0;
@@ -192,7 +192,8 @@ nav ul {
 .content {
   width: 600px;
   max-width: 100%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 
@@ -370,8 +371,9 @@ nav ul {
 }
 
 .bio-content {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  position: relative;
+  margin-top: 50vh;
+  transform: translateY(-50%);
 }
 
 .photo-credit {
@@ -379,8 +381,7 @@ nav ul {
   font-size: 14px;
   margin-top: 0;
   display: block;
-  float: right;
-  text-align: right;
+  text-align: right !important;
 }
 
 .photo-credit a {
@@ -507,10 +508,10 @@ nav ul {
 
   .content p {
     font-size: 1.34em
-  } 
- 
-  .bio-content {
-    padding-top: 110px;
+  }
+
+  .content p.photo-credit {
+      font-size: 1.1em
   }
 
   h2 {
@@ -518,7 +519,7 @@ nav ul {
   }
 }
 @media screen and (width: 1024px) and (height: 768px) {
-  
+
   h2 {
    font-size: 40px;
   }
@@ -539,11 +540,8 @@ nav ul {
 }
 /* < iPad */
 @media screen and (max-width: 767px) {
-  .bio-content {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
 }
+
 @media screen and (max-width: 1023px) and (orientation: landscape) {
   .landscape-left, .landscape-right {
       padding-top: 0;
@@ -566,11 +564,6 @@ nav ul {
 @media screen and (max-width: 568px) {
   .nav-listing li {
     padding: 0 30px;
-  }
-
-  .bio-content {
-    padding-top: 60px;
-    padding-bottom: 60px;
   }
 
   .bio-img {
@@ -596,18 +589,13 @@ nav ul {
   h1 {
     font-size: 70px;
   }
-  
+
   .header-inner {
     padding: 40px 0 30px;
   }
 
   .nav-listing li {
     padding: 0 24px;
-  }
-
-  .bio-content {
-    padding-top: 40px;
-    padding-bottom: 40px;
   }
 
   .parallax-layer-base {
@@ -620,6 +608,30 @@ nav ul {
   }
 }
 
+/* Nexus 6P */
+@media screen and (max-width: 435px) and (max-height: 773px) {
+    h1 {
+        font-size: 56px;
+    }
+
+    .content p {
+        padding-left: 68px;
+        padding-right: 68px;
+        margin: 60px 0;
+    }
+}
+@media screen and (max-width: 773px) and (max-height: 435px) {
+    .content p {
+        padding-left: 68px;
+        padding-right: 68px;
+        margin: 20px 0;
+        font-size: 0.96em;
+    }
+
+    .content p.photo-credit {
+        font-size: 0.8em;
+    }
+}
 
 @media screen and (max-width: 420px) {
   .bio-img {
@@ -639,20 +651,26 @@ nav ul {
 
 
 /* iPhone 6+ */
-@media screen and (max-width: 414px) and (max-height: 736px) {
+@media screen and (max-width: 415px) and (max-height: 737px) {
   .content p {
     font-size: 1.09em;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .content p.photo-credit {
+      font-size: 0.8em
   }
 }
-@media screen and (max-width: 736px) and (max-height: 414px) {
+@media screen and (max-width: 737px) and (max-height: 415px) {
 
   .bio-img {
     background-size: 860px auto;
   }
 
   .content p {
-    font-size: 0.67em;
-    margin: 25px 0px;
+    font-size: 0.78em;
+    margin: 20px 0px;
   }
 
   .portrait {
@@ -668,21 +686,27 @@ nav ul {
     display: inherit;
     width: 40%;
   }
+  .content p.photo-credit {
+      font-size: 0.55em
+  }
 }
 
 
 
 /* iPhone 6 (regular) */
-@media screen and (max-width: 375px) and (max-height: 627px) {
+@media screen and (max-width: 375px) and (max-height: 677px) {
   .content p {
     font-size: 0.88em;
   }
   h1 {
     font-size: 52px;
   }
+  .content p.photo-credit {
+      font-size: 0.7em
+  }
 }
 
-@media screen and (max-width: 627px) and (max-height: 375px) {
+@media screen and (max-width: 677px) and (max-height: 375px) {
   .content p {
     font-size: 0.78em;
   }
@@ -704,11 +728,9 @@ nav ul {
     width: 40%;
   }
 
-  .bio-content {
-    padding-top: 30px;
-    padding-bottom: 30px;
+  .content p.photo-credit {
+      font-size: 0.7em
   }
-
 }
 
 /* generic */
@@ -718,28 +740,23 @@ nav ul {
   }
 
   h1 {
-    font-size: 50px;
+    font-size: 48px;
     padding-bottom: 10px;
   }
 
   .nav-listing li {
     padding: 0 12px;
   }
-
 }
 
-/* Galaxy S4 */
+/* Galaxy S5 */
 @media screen and (max-width: 360px) and (max-height: 640px) {
   .content p {
-    font-size: 0.78em;
+    font-size: 1em;
   }
 }
-@media screen and (max-width: 640px) and (max-height: 360px) {
 
-  .bio-content {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
+@media screen and (max-width: 640px) and (max-height: 360px) {
 
   .content p {
     margin: 20px 0;
@@ -767,7 +784,7 @@ nav ul {
 /* iPhone 5 */
 @media screen and (max-width: 320px) and (max-height: 568px) {
   .content p {
-    font-size: 0.77em;
+    font-size: 0.82em;
   }
 
   h1 {
@@ -776,6 +793,10 @@ nav ul {
 
   .content h2 {
     font-size: 1.1em;
+  }
+
+  .content p.photo-credit {
+      font-size: 0.6em
   }
 }
 @media screen and (max-width: 568px) and (max-height: 320px) {
@@ -796,19 +817,19 @@ nav ul {
     display: inherit;
     width: 35%;
   }
+
+  .content p.photo-credit {
+      font-size: 0.6em
+  }
 }
 
 
 
 /* iPhone 4 */
 @media screen and (max-width: 320px) and (max-height: 480px) {
-  .bio-content {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
 
   .content p {
-    font-size: 0.75em;
+    font-size: 0.8em;
     margin-top: 20px;
     margin-bottom: 20px;
   }
@@ -826,10 +847,6 @@ nav ul {
   }
 }
 @media screen and (max-width: 480px) and (max-height: 320px) {
-  .bio-content {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
 
   .content h2 {
     font-size: 0.95em;
@@ -853,6 +870,3 @@ nav ul {
     display: inherit;
   }
 }
-
-
-

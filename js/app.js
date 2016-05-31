@@ -72,8 +72,7 @@ angular.module('theApp', ['ngRoute', 'ngAnimate'])
       "When you shaved your mustache on stage... it was magical.",
       "No - he doesn't get another one.",
       "You aren't just dorks. You're more than dorks. It's multifaceted.",
-      "He got turned into a spider and now he has a disease named after him. I'd better clear my calender for the next few weeks",
-      "One thing is clear - you'll never look at your hairline again in the same way"
+      "I heard of this vacation spot you should go to: Hell. You should go to Hell."
     ].shuffle()
     var i = 0
     var done = false
