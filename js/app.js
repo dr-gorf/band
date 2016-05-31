@@ -1,3 +1,13 @@
+Array.prototype.shuffle = function() {
+ for (var i = this.length; i; --i) {
+    var j = Math.floor(Math.random() * i);
+    var x = this[i - 1];
+    this[i - 1] = this[j];
+    this[j] = x;
+  }
+  return this;
+}
+
 angular.module('theApp', ['ngRoute', 'ngAnimate'])
   .config(function($routeProvider) {
     $routeProvider.when('/', {
@@ -53,26 +63,28 @@ angular.module('theApp', ['ngRoute', 'ngAnimate'])
     // reviews
     $rootScope.where = '#complaints'
     $scope.reviews = [
-      'This is awful.',
-      'You guys are making too much noise.',
-      'The pirate song is ok, but that\'s about it.',
-      'Stop.',
-      'Did you record that on your phone?',
-      'You\'re not doing it right.',
-      'When you shaved your mustache on stage... it was magical.',
-      'No - he doesn\'t get another one.',
-      'You aren\'t just dorks. You\'re more than dorks. It\'s multifaceted.'
-    ]
+      "This is awful.",
+      "You guys are making too much noise.",
+      "The pirate song is ok, but that's about it.",
+      "Stop.",
+      "Did you record that on your phone?",
+      "You're not doing it right.",
+      "When you shaved your mustache on stage... it was magical.",
+      "I have been spending a lot of money on breakaway clothes...",
+      "You aren't just dorks. You're more than dorks. It's multifaceted.",
+      "I heard of this vacation spot you should go to: Hell. You should go to Hell."
+    ].shuffle()
     var i = 0
     var done = false
     function showReview() {
       if (done)
         return
-      var j = i
-      while (j == i) {
-        j = Math.floor(Math.random() * ($scope.reviews.length))
+
+      if (++i == $scope.reviews.length) {
+        $scope.reviews.shuffle()
+        i = 0
       }
-      $scope.current = i = j
+      $scope.current = i
       $timeout(showReview, 4000)
     }
     $scope.$on('$destroy', function() { done = true })
