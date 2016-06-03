@@ -72,7 +72,7 @@ angular.module('theApp', ['ngRoute', 'ngAnimate'])
       "When you shaved your mustache on stage... it was magical.",
       "I have been spending a lot of money on breakaway clothes...",
       "You aren't just dorks. You're more than dorks. It's multifaceted.",
-      "I heard of this vacation spot you should go to: Hell. You should go to Hell."
+      "I heard of this vacation spot you should go to – Hell. You should go to Hell."
     ].shuffle()
     var i = 0
     var done = false
@@ -80,12 +80,16 @@ angular.module('theApp', ['ngRoute', 'ngAnimate'])
       if (done)
         return
 
-      if (++i == $scope.reviews.length) {
-        $scope.reviews.shuffle()
-        i = 0
+      if (document.hidden) {
+        $timeout(showReview, 4000)
+      } else {
+        if (++i == $scope.reviews.length) {
+          $scope.reviews.shuffle()
+          i = 0
+        }
+        $scope.current = i
+        $timeout(showReview, 4000)
       }
-      $scope.current = i
-      $timeout(showReview, 4000)
     }
     $scope.$on('$destroy', function() { done = true })
     showReview()
