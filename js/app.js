@@ -1,3 +1,8 @@
+var angular = require('angular')
+
+require('angular-route')
+require('angular-animate')
+
 Array.prototype.shuffle = function() {
  for (var i = this.length; i; --i) {
     var j = Math.floor(Math.random() * i);
@@ -32,24 +37,23 @@ angular.module('theApp', ['ngRoute', 'ngAnimate'])
   }).controller('header', function($scope, $timeout) {
       var phrases = [
           'Such Riff',
-          'Many Instrument',
+          'Many Playing',
           'Very Music',
           'Mmmm Notes',
           'Many Timing',
           'Amaze Guitar',
           'So Skill',
-          'Much EQ',
+          'Much Mix',
           'Very Shred',
+          'Such Listen'
       ]
-
-      $scope.doge = ['SUPPLE', 'CONGRESS']
 
       function reDoge() {
           var e = document.getElementById('doge-header'),
               r = e.getBoundingClientRect()
 
           // element not visible
-          if (document.hidden === true || r.top + r.height <= 0)
+          if (document.hidden === true || r.top + r.height <= 0 || !$scope.doge)
               $scope.doge = phrases[Math.floor(Math.random()*phrases.length)]
                                     .toUpperCase()
                                     .split(' ')
