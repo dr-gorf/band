@@ -59,6 +59,13 @@ p {
   line-height: 1.5em;
 }
 
+header {
+    transform: translateZ(0);
+}
+#doge-header {
+    margin: 15px 0;
+}
+
 article,aside,details,figcaption,figure,
 footer,header,menu,nav,section {
   display:block;
@@ -221,6 +228,11 @@ nav ul {
 .band-section {
   padding-top: 50px;
   padding-bottom: 20px;
+}
+
+.band-picture {
+    width: 100%;
+    height: auto;
 }
 
 .left-panel {

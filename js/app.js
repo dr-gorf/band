@@ -29,7 +29,37 @@ angular.module('theApp', ['ngRoute', 'ngAnimate'])
       }).otherwise({
         redirectTo: '/'
       })
-  }).controller('nav', function($scope) {
+  }).controller('header', function($scope, $timeout) {
+      var phrases = [
+          'Such Riff',
+          'Many Instrument',
+          'Very Music',
+          'Mmmm Notes',
+          'Many Timing',
+          'Amaze Guitar',
+          'So Skill',
+          'Much EQ',
+          'Very Shred',
+      ]
+
+      $scope.doge = ['SUPPLE', 'CONGRESS']
+
+      function reDoge() {
+          var e = document.getElementById('doge-header'),
+              r = e.getBoundingClientRect()
+
+          // element not visible
+          if (document.hidden === true || r.top + r.height <= 0)
+              $scope.doge = phrases[Math.floor(Math.random()*phrases.length)]
+                                    .toUpperCase()
+                                    .split(' ')
+
+          $timeout(reDoge, 200)
+      }
+
+      reDoge()
+  })
+  .controller('nav', function($scope) {
     $scope.links = [
       {
         href: '#home',
@@ -56,7 +86,7 @@ angular.module('theApp', ['ngRoute', 'ngAnimate'])
   }).controller('music', function($scope, $rootScope) {
     // discography
     $rootScope.where = '#music'
-  }).controller('band', function($scope, $rootScope) {
+}).controller('band', function($scope, $rootScope, $timeout) {
     // the band page
     $rootScope.where = '#band'
   }).controller('reviews', function($scope, $timeout, $rootScope) {
@@ -80,8 +110,8 @@ angular.module('theApp', ['ngRoute', 'ngAnimate'])
       if (done)
         return
 
-      if (document.hidden) {
-        $timeout(showReview, 4000)
+      if (document.hidden === true) {
+        $timeout(showReview, 1000)
       } else {
         if (++i == $scope.reviews.length) {
           $scope.reviews.shuffle()

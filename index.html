@@ -16,8 +16,8 @@
       <!--<header class="parallax-layer parallax-layer-base">-->
       <header class="parallax-group">
         <div class="header-inner">
-          <div class="title">
-            <h1>SUPPLE<br>CONGRESS</h1>
+          <div class="title" ng-controller="header">
+            <h1 id="doge-header">{{doge[0]}}<br>{{doge[1]}}</h1>
           </div>
           <menu ng-controller="nav" class="nav">
             <ol class="nav-listing">
