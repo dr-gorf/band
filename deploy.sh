@@ -7,7 +7,7 @@ git commit --allow-empty -m 'deploy'
 npm run build
 git branch -D gh-pages
 git checkout -b gh-pages
-ls | grep -v dist | xargs rm -rf
+ls | grep -v dist | grep -v node_modules | xargs rm -rf
 mv dist/* .
 rmdir dist
 git commit -am '%'
