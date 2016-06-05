@@ -15,7 +15,8 @@ module.exports = {
             { test: /\.css$/, loader: "style-loader!css-loader" },
             { test: /index.html$/, loader: "file-loader?name=index.html" },
             { test: /favicon.ico$/, loader: "file-loader?name=favicon.ico" },
-            { test: /(\.jpg)|(views\/.*\.html)$/, loader: "file-loader?name=[hash:6].[ext]" }
+            { test: /beach.jpg$/, loader: "file-loader?name=beach.jpg" },
+            { test: /img\/.*(\.jpg)|(views\/.*\.html)$/, loader: "file-loader?name=[hash:6].[ext]" }
         ]
     }
 }

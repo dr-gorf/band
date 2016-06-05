@@ -13,4 +13,4 @@ popd
 cp .git/config $TARGET/.git/config
 git add .
 git commit -am '%'
-# git push -f origin gh-pages
+git push -f origin gh-pages
