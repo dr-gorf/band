@@ -1,0 +1,5 @@
+require('./band.js')
+require('./home.js')
+require('./music.js')
+require('./nav.js')
+require('./reviews.js')

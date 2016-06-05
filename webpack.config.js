@@ -1,17 +1,21 @@
 var webpack = require("webpack")
 module.exports = {
-    entry: "./js/app.js",
+    entry: ".",
     plugins: [
-        new webpack.optimize.UglifyJsPlugin(),
-        new webpack.optimize.DedupePlugin()
+        // new webpack.optimize.UglifyJsPlugin(),
+        // new webpack.optimize.DedupePlugin()
     ],
     output: {
         path: './dist',
-        filename: "supple.js"
+        filename: "index.js"
     },
     module: {
         loaders: [
-            { test: /\.css$/, loader: "style!css" }
+            { test: /\.js$/, loader: "babel-loader"},
+            { test: /\.css$/, loader: "style-loader!css-loader" },
+            { test: /index.html$/, loader: "file-loader?name=index.html" },
+            { test: /favicon.ico$/, loader: "file-loader?name=favicon.ico" },
+            { test: /(\.jpg)|(views\/.*\.html)$/, loader: "file-loader?name=[hash:6].[ext]" }
         ]
     }
 }

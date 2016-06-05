@@ -306,13 +306,13 @@ nav ul {
 }
 
 .accordian {
-  background: url('img/accordian.jpg') no-repeat;
+  background: url('./img/accordian.jpg') no-repeat;
   background-position: center;
   background-size: 100% auto;
 }
 
 .stick {
-  background: url('img/stick.jpg') no-repeat;
+  background: url('./img/stick.jpg') no-repeat;
   background-position: center;
   background-size: auto 100%;
 }
@@ -427,15 +427,15 @@ nav ul {
 }
 
 .bio-img1 {
-  background: url('img/slide1.jpg') no-repeat;
+  background: url('./img/slide1.jpg') no-repeat;
 }
 
 .bio-img2 {
-  background: url('img/slide2.jpg') no-repeat;
+  background: url('./img/slide2.jpg') no-repeat;
 }
 
 .bio-img3 {
-  background: url('img/slide3.jpg') no-repeat;
+  background: url('./img/slide3.jpg') no-repeat;
 }
 
 .bio-img {

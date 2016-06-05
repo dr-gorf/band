@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "many talent!",
   "scripts": {
-    "build": "webpack"
+    "start": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js --content-base build",
+    "build": "node node_modules/webpack/bin/webpack.js",
+    "clean": "rm -rf dist",
+    "deploy": "./deploy.sh"
   },
   "repository": {
     "type": "git",
@@ -13,11 +16,14 @@
   "license": "MIT",
   "homepage": "supple-congress.github.io",
   "dependencies": {
-    "angular": "^1.5.6",
-    "angular-animate": "^1.5.6",
-    "angular-route": "^1.5.6",
-    "css-loader": "^0.23.1",
-    "style-loader": "^0.13.1",
-    "webpack": "^1.13.1"
+    "angular": "1.5.6",
+    "angular-animate": "1.5.6",
+    "angular-route": "1.5.6",
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "css-loader": "^0.23.*",
+    "style-loader": "^0.13.*",
+    "webpack": "^1.13.*",
+    "webpack-dev-server": "^1.14.*"
   }
 }
