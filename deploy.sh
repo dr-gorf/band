@@ -2,14 +2,15 @@
 
 set -ex
 
-git add .
-git commit --allow-empty -m 'deploy'
 npm run build
-git branch -D gh-pages
-git checkout -b gh-pages
-ls | grep -v dist | grep -v node_modules | xargs rm -rf
-mv dist/* .
-rmdir dist
+TARGET=/tmp/gh-pages
+rm -rf $TARGET
+mkdir $TARGET
+cp -r dist/* $TARGET
+pushd $TARGET
+git init .
+popd
+cp .git/config $TARGET/.git/config
+git add .
 git commit -am '%'
-git push -f origin gh-pages
-git checkout master
+# git push -f origin gh-pages
