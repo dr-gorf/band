@@ -1,5 +1,5 @@
 require('./band.js')
-require('./header.js')
+require('./doge.js')
 require('./home.js')
 require('./music.js')
 require('./nav.js')

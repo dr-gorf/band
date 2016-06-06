@@ -9,11 +9,10 @@
   </head>
   <body>
     <div class="main">
-      <!--<header class="parallax-layer parallax-layer-base">-->
-      <header class="parallax-group">
+      <header class="parallax-group" ng-controller="doge">
         <div class="header-inner">
           <div class="title">
-            <h1>SUPPLE<br>CONGRESS?</h1>
+            <h1 id="doge-target">{{doge[0]}} {{doge[1]}}</h1>
           </div>
           <menu ng-controller="nav" class="nav">
             <ol class="nav-listing">
@@ -28,7 +27,7 @@
         <div class="view" ng-view></div>
       </div>
 
-      <!-- home view -->
+      <!-- home "view" -->
       <div ng-if="$root.home" style="z-index: 1" class="parallax-group">
         <div class="parallax-layer parallax-layer-back bio-img bio-img1"></div>
       </div>
@@ -51,7 +50,6 @@
       <div ng-if="$root.home" style="z-index: 6" class="parallax-group">
         <div class="parallax-layer parallax-layer-base">
           <div class="content bio-content">
-            <!-- <h2>What's a Supple Congress, And Why Do I Want One?</h2> -->
             <p>At its heart, Supple Congress is just a couple of has-beens trying to relive their glory days by recording ironically absurd music.
                But if you look past that, you find a rich tapestry of genre-transcending sonic poetry.</p>
             <p>Our style knows no bounds, our standards have never been lower, and if you pay us extra we'll come over to your house and wreck up the place.
@@ -78,7 +76,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </body>
 </html>
