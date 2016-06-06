@@ -3,16 +3,20 @@
 set -ex
 
 npm run build
-TARGET=/tmp/gh-pages
+
+CWD=$(pwd)
+TARGET="/tmp/gh-pages"
+
 rm -rf $TARGET
 mkdir $TARGET
-cp -r dist/* $TARGET
-pushd $TARGET
-git init .
-popd
-cp .git/config $TARGET/.git/config
 cd $TARGET
+git init .
+cp $CWD/.git/config $TARGET/.git/config
 git checkout -b gh-pages
+git pull origin gh-pages
+rm -rf *
+cp -r $CWD/dist/* $TARGET
+
 git add .
 git commit -am '%'
 git push -f origin gh-pages

@@ -11,7 +11,8 @@ require('../app.js').controller('header', ['$scope', '$timeout', function($scope
     'So Skill',
     'Much Mix',
     'Very Shred',
-    'Such Listen'
+    'Such Listen',
+    'Wow Singing',
   ]
 
   function reDoge() {
