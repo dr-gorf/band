@@ -1,4 +1,5 @@
 require('../app.js')
-  .controller('music', ['$rootScope',
-  ($rootScope) => $rootScope.where = '#music'
+  .controller('music', ['$rootScope', function($rootScope) {
+    $rootScope.where = '#music'
+  }
 ])

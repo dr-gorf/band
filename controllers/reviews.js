@@ -1,8 +1,9 @@
+'use strict'
 require('../app.js')
   .controller('reviews', ['$scope', '$timeout', '$rootScope',
-  ($scope, $timeout, $rootScope) => {
+  function($scope, $timeout, $rootScope) {
     function shuffle(a) {
-      for (var i = a.length; i; --i) {
+      for (let i = a.length; i; --i) {
         var j = Math.floor(Math.random() * i);
         var x = a[i - 1];
         a[i - 1] = a[j];
@@ -23,8 +24,8 @@ require('../app.js')
       "When you shaved your mustache on stage... it was magical.",
       "I have been spending a lot of money on breakaway clothes...",
       "You aren't just dorks. You're more than dorks. It's multifaceted.",
-      "I heard of this vacation spot you should go to – Hell. You should go to Hell."
     ])
+    
     var i = 0, done = false
     function showReview() {
       if (done)

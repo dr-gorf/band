@@ -24,7 +24,7 @@ module.exports = angular.module('supple', [ngRoute, ngAnimate])
       redirectTo: '/'
     })
 }])
-.run(['$rootScope', ($rootScope) => $rootScope.$on('$routeChangeSuccess',
+.run(['$rootScope', '$route', ($rootScope) => $rootScope.$on('$routeChangeSuccess',
   (event, current, previous) => {
     if (current.$$route)
       $rootScope.title = current.$$route.title

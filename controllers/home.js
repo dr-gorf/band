@@ -1,6 +1,6 @@
 require('../app.js')
 .controller('home', ['$scope', '$rootScope',
-  ($scope, $rootScope) => {
+  function($scope, $rootScope) {
     // home page
     $rootScope.home = true
     $rootScope.where = '#home'
