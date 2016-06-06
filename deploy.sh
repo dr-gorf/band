@@ -12,11 +12,10 @@ mkdir $TARGET
 cd $TARGET
 git init .
 cp $CWD/.git/config $TARGET/.git/config
-git checkout -b gh-pages
-git pull origin gh-pages
+git pull origin master
 rm -rf *
 cp -r $CWD/dist/* $TARGET
 
 git add .
 git commit -am '%'
-git push -f origin gh-pages
+git push -f origin master
