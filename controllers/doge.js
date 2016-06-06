@@ -17,7 +17,8 @@ require('../app.js').controller('doge', ['$scope', '$timeout', function($scope, 
     'Funky Priest',
   ]
 
-  var changed = false
+  var changed = false,
+      doge = ['SUPPLE CONGRESS']
   function reDoge() {
     var e = document.getElementById('doge-target'),
         r = e.getBoundingClientRect(),
@@ -26,14 +27,16 @@ require('../app.js').controller('doge', ['$scope', '$timeout', function($scope, 
 
 
     // element not visible
-    if (!changed && (isHidden || !$scope.doge)) {
-      let current = $scope.doge ? $scope.doge[0] : ''
-      while (!$scope.doge || current == $scope.doge[0]) {
-        $scope.doge = phrases[Math.floor(Math.random()*phrases.length)]
-                              .toUpperCase()
-                              .split(' ')
+    if (!changed && (!$scope.doge || isHidden)) {
+      let current = doge[0]
+      while (current == doge[0]) {
+        doge = phrases[Math.floor(Math.random()*phrases.length)]
+                      .toUpperCase()
+                      .split(' ')
       }
-      
+
+      $scope.doge = `${doge[0]} ${doge[1]}`
+      console.log($scope.doge)
       changed = true
     } else {
       sampleRate = 500
