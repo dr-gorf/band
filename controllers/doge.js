@@ -5,20 +5,21 @@ require('../app.js').controller('doge', ['$scope', '$timeout', function($scope, 
     'Such Riff',
     'Many Playing',
     'Very Music',
-    'Mmmm Creamy',
-    'Many Timing',
+    'Mmmm',
+    'Many Funk',
     'Amaze Guitar',
     'So Mixing',
     'Much Loud',
     'Very Shred',
     'Such Listen',
-    'Wow Singing',
-    'Creamy Beige',
-    'Funky Priest',
+    'Wow',
+    'Hot Doge',
+    'Now With Sound'
   ]
 
   var changed = false,
-      doge = ['SUPPLE CONGRESS']
+      doge = '.'
+
   function reDoge() {
     var e = document.getElementById('doge-target'),
         r = e.getBoundingClientRect(),
@@ -28,15 +29,11 @@ require('../app.js').controller('doge', ['$scope', '$timeout', function($scope, 
 
     // element not visible
     if (!changed && (!$scope.doge || isHidden)) {
-      let current = doge[0]
-      while (current == doge[0]) {
+      let    current =  doge.split(' ')[0]
+      while (current == doge.split(' ')[0])
         doge = phrases[Math.floor(Math.random()*phrases.length)]
-                      .toUpperCase()
-                      .split(' ')
-      }
 
-      $scope.doge = `${doge[0]} ${doge[1]}`
-      console.log($scope.doge)
+      $scope.doge = doge
       changed = true
     } else {
       sampleRate = 500
