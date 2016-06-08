@@ -27,7 +27,7 @@ time, mark, audio, video {
 }
 
 h1 {
-  font-size: 44px;
+  font-size: 78px;
   font-family: 'Orbitron', sans-serif;
 }
 
@@ -140,7 +140,7 @@ header {
 }
 
 .header-inner {
-  padding: 60px 0 40px;
+  padding: 80px 0 25px;
   height: auto !important;
   bottom: auto !important;
   background: #fff;
@@ -148,7 +148,7 @@ header {
 
 .nav {
   display: block;
-  margin-top: 24px
+  margin-top: 10px
 }
 
 nav ul {
@@ -618,11 +618,11 @@ nav ul {
 
 @media screen and (max-width: 480px) {
   h1 {
-    font-size: 40px;
+    font-size: 70px;
   }
 
   .header-inner {
-    padding: 40px 0 30px;
+    padding: 40px 0 20px;
   }
 
   .nav-listing li {
@@ -642,7 +642,7 @@ nav ul {
 /* Nexus 6P */
 @media screen and (max-width: 435px) and (max-height: 773px) {
     h1 {
-        font-size: 36px;
+        font-size: 56px;
     }
 
     .content p {
@@ -670,7 +670,7 @@ nav ul {
   }
 
   h1 {
-    font-size: 32px;
+    font-size: 60px;
   }
 
   .nav-listing li {
@@ -684,7 +684,10 @@ nav ul {
 /* iPhone 6+ */
 @media screen and (max-width: 415px) and (max-height: 737px) {
 
-  h1 { font-size: 35px; }
+  h1 {
+    font-size: 55px;
+  }
+  
   .content p {
     font-size: 1.09em;
     padding-left: 60px;
@@ -732,7 +735,7 @@ nav ul {
     font-size: 0.88em;
   }
   h1 {
-    font-size: 30px;
+    font-size: 52px;
   }
   .content p.photo-credit {
       font-size: 0.7em
@@ -773,7 +776,7 @@ nav ul {
   }
 
   h1 {
-    font-size: 30px;
+    font-size: 48px;
     padding-bottom: 10px;
   }
 
@@ -821,7 +824,7 @@ nav ul {
   }
 
   h1 {
-    font-size: 30px;
+    font-size: 45px;
   }
 
   .content h2 {
@@ -901,5 +904,11 @@ nav ul {
 
   .landscape-right {
     display: inherit;
+  }
+}
+
+@media screen and (max-aspect-ratio: 3/4) {
+  .parallax-group {
+    height: 75vh;
   }
 }
