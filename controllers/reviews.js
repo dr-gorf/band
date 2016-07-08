@@ -24,10 +24,11 @@ require('../app.js')
       "When you shaved your mustache on stage... it was magical.",
       "I have been spending a lot of money on breakaway clothes...",
       "You aren't just dorks. You're more than dorks. It's multifaceted.",
-      "This sounds horrible. You guys should start playing on higher cliffs than the ones in La Selva."
-      "I wanna spend the 2k I have in the bank right now and spend it all on paper so I can print out the words as many times as I can and then burn both your houses down with it all."
+      "This sounds horrible. You guys should start playing on higher cliffs than the ones in La Selva.",
+      "I wanna spend the 2k I have in the bank right now and spend it all on paper so I can print out the words as " +
+      "many times as I can and then burn both your houses down with it all."
     ])
-    
+
     var i = 0, done = false
     function showReview() {
       if (done)
