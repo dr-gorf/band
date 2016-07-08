@@ -42,7 +42,7 @@ require('../app.js')
           i = 0
         }
         $scope.current = i
-        $timeout(showReview, 4000)
+        $timeout(showReview, 4000 + $scope.reviews[i].length * 40)
       }
     }
     $scope.$on('$destroy', () => done = true)
